@@ -1,0 +1,3 @@
+#Gentoo Install Step#
+
+##ccc##
