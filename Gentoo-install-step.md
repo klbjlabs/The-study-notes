@@ -243,23 +243,69 @@ Ctrl-X 保存
     
  #####/etc/conf.d/hwclock#####
  
+    # nano -w /etc/conf.d/hwclock
+--- 
+    (If your hardware clock is not using UTC)
+    clock="local"
+    
+###9.安装必备的系统工具###
+
+####日志系统####
+
+    # emerge syslog-ng
+    # rc-update add syslog-ng default
+    
+####任务计划####
+
+    # emerge cronie
+    # rc-update add cronie default
+    (Only if you have chosen dcron or fcron) # crontab /etc/crontab
+        
+####文件索引####
+
+    # emerge mlocate
+    
+####远程访问####
+
+    # rc-update add sshd default
+    
+####网络工具####
+
+    # emerge dhcpcd
+    
+###10.配置引导###
+
+    # emerge sys-boot/grub
+    # grub2-install /dev/sda
+    # grub2-mkconfig -o /boot/grub/grub.cfg
+    
+###11.安装完毕--重启###   
+    
+    # exit
+    cdimage ~# cd
+    cdimage ~# umount -l /mnt/gentoo/dev{/shm,/pts,}
+    cdimage ~# umount -l /mnt/gentoo{/boot,/proc,}
+    cdimage ~# reboot
+        
+###完善系统###   
+
+####添加日常用户####
+
+    # useradd -m -G users,wheel,audio -s /bin/bash john
+    # passwd john
+    
+####清理硬盘####
+
+    # rm /stage3-*.tar.bz2*
     
     
+---
+
+#####参考文档#####
+
+[Gentoo Linux AMD64 Handbook](http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?full=1)
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     
     
     
