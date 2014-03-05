@@ -25,7 +25,7 @@
     # mkfs.ext2 /dev/sda2
     # mkfs.ext4 /dev/sda3
     # mkfs.ext4 /dev/sda4
-
+  
     # mkswap /dev/sda1
     # swapon /dev/sda1
     
@@ -36,8 +36,14 @@
     # mount /dev/sda2 /mnt/gentoo/boot
     # mkdir /mnt/gentoo /mnt/gentoo/home
     # mount /dev/sda4 /mnt/gentoo/home
-    
+
+###4.安装基本系统###
+
 ####下载Stage Tarball####
 
     # cd /mnt/gentoo
+    # links http://www.gentoo.org/main/en/mirrors.xml
+    
+####校验####
+
     
