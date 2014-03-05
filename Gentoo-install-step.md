@@ -148,7 +148,7 @@ Ctrl-X 保存
     # cd /usr/src/linux
     # make menuconfig
     
-===内核配置===
+####内核配置####
     
     Processor type and features  --->
        [ ] Machine Check / overheating reporting 
