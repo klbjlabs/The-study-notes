@@ -31,3 +31,13 @@
     
 ####挂载####
 
+    # mount /dev/sda3 /mnt/gentoo
+    # mkdir /mnt/gentoo/boot
+    # mount /dev/sda2 /mnt/gentoo/boot
+    # mkdir /mnt/gentoo /mnt/gentoo/home
+    # mount /dev/sda4 /mnt/gentoo/home
+    
+####下载Stage Tarball####
+
+    # cd /mnt/gentoo
+    
