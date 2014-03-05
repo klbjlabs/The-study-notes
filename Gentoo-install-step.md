@@ -25,7 +25,7 @@
     # mkfs.ext2 /dev/sda2
     # mkfs.ext4 /dev/sda3
     # mkfs.ext4 /dev/sda4
-  
+<br />
     # mkswap /dev/sda1
     # swapon /dev/sda1
     
@@ -45,5 +45,9 @@
     # links http://www.gentoo.org/main/en/mirrors.xml
     
 ####校验####
+
+####解压Stage Tarball####
+
+
 
     
