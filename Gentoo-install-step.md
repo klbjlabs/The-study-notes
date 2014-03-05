@@ -25,6 +25,7 @@
     # mkfs.ext2 /dev/sda2
     # mkfs.ext4 /dev/sda3
     # mkfs.ext4 /dev/sda4
+---
     # mkswap /dev/sda1
     # swapon /dev/sda1
     
