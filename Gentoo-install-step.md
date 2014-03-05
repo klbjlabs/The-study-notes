@@ -50,9 +50,18 @@
 
     # tar xvjpf stage3-*.tar.bz2
 
-####配置编译选项####
+###5.配置编译选项###
 
     # nano -w /mnt/gentoo/etc/portage/make.conf
+---
+    CFLAGS="-march=core2 -O2 -pipe"
+    CXXFLAGS="${CFLAGS}"
+    MAKEOPTS="-j5"
     
-    
-    
+Ctrl-X 保存
+
+###6.安装基本系统###
+
+####Chrooting####
+
+    # mirrorselect -i -o >> /mnt/gentoo/etc/portage/make.conf
