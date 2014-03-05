@@ -25,7 +25,7 @@
     # mkfs.ext2 /dev/sda2
     # mkfs.ext4 /dev/sda3
     # mkfs.ext4 /dev/sda4
-<br />
+ 
     # mkswap /dev/sda1
     # swapon /dev/sda1
     
@@ -48,6 +48,11 @@
 
 ####解压Stage Tarball####
 
+    # tar xvjpf stage3-*.tar.bz2
 
+####配置编译选项####
 
+    # nano -w /mnt/gentoo/etc/portage/make.conf
+    
+    
     
