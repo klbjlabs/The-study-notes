@@ -53,7 +53,7 @@
 ###5.配置编译选项###
 
     # nano -w /mnt/gentoo/etc/portage/make.conf
----
+    ---
     CFLAGS="-march=core2 -O2 -pipe"
     CXXFLAGS="${CFLAGS}"
     MAKEOPTS="-j5"
@@ -104,7 +104,7 @@ Ctrl-X 保存
 #####配置USE变量#####
     
     # nano -w /etc/portage/make.conf
----
+    ---
     USE="-gtk -gnome qt4 kde dvd alsa cdr"
 
 #####设置时区#####
@@ -115,14 +115,14 @@ Ctrl-X 保存
 #####Configure locales#####
 
     # nano -w /etc/locale.gen
----
+    ---
     en_US ISO-8859-1
     en_US.UTF-8 UTF-8
     de_DE ISO-8859-1
     de_DE@euro ISO-8859-15
 ---
     # locale-gen
----
+    ---
     # eselect locale list
     Available targets for the LANG variable:
       [1] C
@@ -137,7 +137,7 @@ Ctrl-X 保存
       [ ] (free form)
 ---   
     # eselect locale set 9 
----    
+    ---    
     # env-update && source /etc/profile 
     
  ###7.手动配置内核###
@@ -215,13 +215,13 @@ Ctrl-X 保存
 #####主机名#####
 
     # nano -w /etc/conf.d/hostname
----
+    ---
     hostname="tux"
     
 #####域名#####
 
     # nano -w /etc/conf.d/net
----
+    ---
     dns_domain_lo="homenetwork"
         
 #####配置网络#####
@@ -244,7 +244,7 @@ Ctrl-X 保存
  #####/etc/conf.d/hwclock#####
  
     # nano -w /etc/conf.d/hwclock
---- 
+    --- 
     (If your hardware clock is not using UTC)
     clock="local"
     
