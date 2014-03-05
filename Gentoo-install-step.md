@@ -64,4 +64,47 @@ Ctrl-X 保存
 
 ####Chrooting####
 
+#####选择镜像####
+
     # mirrorselect -i -o >> /mnt/gentoo/etc/portage/make.conf
+    # mirrorselect -i -r -o >> /mnt/gentoo/etc/portage/make.conf
+    
+#####拷贝DNS信息#####
+
+    # cp -L /etc/resolv.conf /mnt/gentoo/etc/
+    
+#####挂载必要的文件系统#####
+
+    # mount -t proc proc /mnt/gentoo/proc
+    # mount --rbind /sys /mnt/gentoo/sys
+    # mount --rbind /dev /mnt/gentoo/dev
+    
+#####进入新环境#####
+
+    # chroot /mnt/gentoo /bin/bash
+    # source /etc/profile
+    # export PS1="(chroot) $PS1"
+    
+#####配置Portage#####
+
+    # emerge-webrsync
+    # emerge --sync
+
+#####选择需要的环境配置#####
+    
+    # eselect profile list
+    Available profile symlink targets:
+      [1]   default/linux/amd64/13.0 *
+      [2]   default/linux/amd64/13.0/desktop
+      [3]   default/linux/amd64/13.0/desktop/gnome
+      [4]   default/linux/amd64/13.0/desktop/kde
+---
+    # eselect profile set 2
+
+#####配置USE变量#####
+    
+    # nano -w /etc/portage/make.conf
+---
+    USE="-gtk -gnome qt4 kde dvd alsa cdr"
+
+    
