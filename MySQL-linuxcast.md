@@ -68,20 +68,20 @@
 > * 可以设置表、存储过程和殊途的权限
 
 ### SQL 语句分类
-> * Data Definition Language (DDL)
+> * **Data Definition Language (DDL)**
 >   * `CREATE` - 在数据库中创建对象
 >   * `ALTER` - 修改数据库结构
 >   * `DROP` - 删除对象
 >   * `RENAME` - 重命名对象
-> * Data Manipulation Language (DML)
+> * **Data Manipulation Language (DML)**
 >   * `SELECT` - 从数据库中获取数据
 >   * `INSERT` - 向一个表中插入数据
 >   * `UPDATE` - 更新一个表中已有的数据
 >   * `DELETE` - 删除表中的数据
-> * Data Control Language (DCL)
+> * **Data Control Language (DCL)**
 >   * `GRANT` - 赋予一个用户对数据库或数据表的指定权限
 >   * `REVOKE` - 删除一个用户对数据库或数据表的指定权限
-> * Transation Control (TCL)
+> * **Transation Control (TCL)**
 >   * `COMMIT` - 保存数据操作
 >   * `SAVEPOINT` - 为方便rollback标记一个事务点
 >   * `ROLLBACK` - 从最后一次COMMIT中恢复到提交前状态
