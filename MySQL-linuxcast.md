@@ -36,8 +36,14 @@
 ###remote access mysql-server
 
 	# mysql -h 192.168.1.105 -u root -p
+###常用命令
 
-	# SELECT VERSION();
+* `mysql> SELECT VERSION();`	查看当前MySQL版本
+* `mysql> SHOW DATABASES;`	查看所有的数据库 其中 "test" 为试验用数据库可随意更改
+* `mysql> CREATE DATABASE abc`	创建名为“abc”的数据库
+* `mysql> DROP DATABASE abc`	删除名为“abc”的数据库
+* `mysql> USE abc`		将当前的数据库切换为“abc”
 
+> 数据库的名称不能修改
 
 
