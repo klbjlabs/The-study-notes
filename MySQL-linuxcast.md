@@ -87,5 +87,16 @@
 >   * `ROLLBACK` - 从最后一次COMMIT中恢复到提交前状态
 
 
+## Lesson 4 SQL语言基础 - 2
+
+###
+* `CREATE DATABASE linuxcast;` - 创建数据库
+* `DROP DATABASE linuxcast;` - 删除数据库
+* --`RENAME DATABASE linuxcast TO lcdb;` - 重命名数据库（已失效）--
+
+
+
+
+
 
 
