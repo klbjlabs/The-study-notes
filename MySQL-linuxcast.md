@@ -4,7 +4,7 @@
 
 	# yum list | grep mysql
 	# yum install -y mysql-server mysql mysql-devel
- 	# rpm -qi mysql-server
+	# rpm -qi mysql-server
 	# service mysqld start
 
 ##Init
@@ -17,14 +17,14 @@
 	# chkconfig mysqld on
 
 ###Config File
-* `/etc/mysql.conf`	// Mysql config file
-* `/var/lib/mysql/`	// Database dir /cun chu zai ke kao de cun chu wei zhi
-			// ru pan gui, wang luo cun chu
-* `/var/log/mysqld.log`	// ri zhi wen jian
 
-###Port
+* `/etc/mysql.conf`	 Mysql 配置文件
+* `/var/lib/mysql/`	 数据库存储目录 可修改为可靠的存储位置  如盘柜 网络存储等
+* `/var/log/mysqld.log`	 日志文件
+
+###端口（默认的端口号为 TCP 3306）
 	
-	# netstat -tupln //  Default Port 3306 TCP
+	# netstat -tupln
 	---
 	Active Internet connections (only servers)
 	Proto Recv-Q Send-Q Local Address               Foreign Address             State       PID/Program name   
@@ -36,6 +36,8 @@
 ###remote access mysql-server
 
 	# mysql -h 192.168.1.105 -u root -p
+
+	# SELECT VERSION();
 
 
 
