@@ -41,12 +41,16 @@
 
 * `mysql> SELECT VERSION();`	查看当前MySQL版本
 * `mysql> SHOW DATABASES;`	查看所有的数据库 其中 "test" 为试验用数据库可随意更改
-* `mysql> CREATE DATABASE abc`	创建名为“abc”的数据库
-* `mysql> DROP DATABASE abc`	删除名为“abc”的数据库
-* `mysql> USE abc`		将当前的数据库切换为“abc”
+* `mysql> CREATE DATABASE abc`	创建名为 "abc" 的数据库
+* `mysql> DROP DATABASE abc`	删除名为 "abc" 的数据库
+* `mysql> USE abc`		将当前的数据库切换为 "abc"
 
 > 数据库的名称不能修改
 
 ---
 
-##Lesson 3
+## Lesson 3 SQL语言基础 - 1
+
+### SQL (Structured Query Language) 结构化查询语言
+> * SQL是一个ANSI标准计算机语言，设计用来访问、操作数据库系统。 
+> * 几乎所有现今的关系型数据库软件（MySQL, MS Access, DB2, Informix, MS SQL Server, Oracle, Sybase...）都是用SQL进行查询、管理及常用操作.
