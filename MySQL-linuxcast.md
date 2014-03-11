@@ -1,28 +1,29 @@
-##Chapter 1
+# MySQL数据库基础
+## Lesson 1 MySQL数据库安装及基本配置
 
-###Install
+### Install
 
 	# yum list | grep mysql
 	# yum install -y mysql-server mysql mysql-devel
 	# rpm -qi mysql-server
 	# service mysqld start
 
-###Init
+### Init
 
 	# mysqladmin -u root password 'xxzxadmin'
 	# mysql -u root -p
 
-###Auto boot
+### Auto boot
 
 	# chkconfig mysqld on
 
-###Config File
+### Config File
 
 * `/etc/my.conf`	 Mysql 配置文件
 * `/var/lib/mysql/`	 数据库存储目录 可在`/etc/my.conf`中修改`datadir=`字段为可靠的存储位置---如盘柜、网络存储等
 * `/var/log/mysqld.log`	 日志文件
 
-###端口（默认的端口号为 TCP 3306）
+### 端口（默认的端口号为 TCP 3306）
 	
 	# netstat -tupln
 	---
@@ -31,12 +32,12 @@
 	tcp        0      0 0.0.0.0:3306                0.0.0.0:*                   LISTEN      1235/mysqld       
 ---
 
-##Chapter 2
+## Lesson 2 MySQL数据库基本操作
 
-###remote access mysql-server
+### remote access mysql-server
 
 	# mysql -h 192.168.1.105 -u root -p
-###常用命令
+### 常用命令
 
 * `mysql> SELECT VERSION();`	查看当前MySQL版本
 * `mysql> SHOW DATABASES;`	查看所有的数据库 其中 "test" 为试验用数据库可随意更改
@@ -46,4 +47,6 @@
 
 > 数据库的名称不能修改
 
+---
 
+##Lesson 3
