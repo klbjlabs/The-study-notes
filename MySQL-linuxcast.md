@@ -7,7 +7,7 @@
 	# rpm -qi mysql-server
 	# service mysqld start
 
-##Init
+###Init
 
 	# mysqladmin -u root password 'xxzxadmin'
 	# mysql -u root -p
@@ -18,8 +18,8 @@
 
 ###Config File
 
-* `/etc/mysql.conf`	 Mysql 配置文件
-* `/var/lib/mysql/`	 数据库存储目录 可修改为可靠的存储位置  如盘柜 网络存储等
+* `/etc/my.conf`	 Mysql 配置文件
+* `/var/lib/mysql/`	 数据库存储目录 可在`/etc/my.conf`中修改`datadir=`字段为可靠的存储位置---如盘柜、网络存储等
 * `/var/log/mysqld.log`	 日志文件
 
 ###端口（默认的端口号为 TCP 3306）
