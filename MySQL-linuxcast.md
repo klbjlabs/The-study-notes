@@ -86,17 +86,47 @@
 >   * `SAVEPOINT` - 为方便rollback标记一个事务点
 >   * `ROLLBACK` - 从最后一次COMMIT中恢复到提交前状态
 
-
+---
 ## Lesson 4 SQL语言基础 - 2
 
-###
+### 创建数据库
 * `CREATE DATABASE linuxcast;` - 创建数据库
 * `DROP DATABASE linuxcast;` - 删除数据库
-* --`RENAME DATABASE linuxcast TO lcdb;` - 重命名数据库（已失效）--
+* `RENAME DATABASE linuxcast TO lcdb;` - 重命名数据库（已失效）
 
+### 创建表
 
+	CREATE TABLE 表名称(
+	列名1 数据类型,
+	列名2 数据类型,
+	列名3 数据类型,
+	...
+	);
 
+	---
+	CREATE TABLE lc_course(
+	id int,
+	course_name varchar(100),
+	course_length int,
+	teacher varchar(50),
+	category varchar(100)
+	);
+### 查看表结构
 
+	DESCRIBE lc_course;
 
+### 删除表
+	
+	DROP TABLE lc_course;
 
+### 修改表
 
+* `ALTER TABLE lc_course RENAME course;` - 重命名表	
+* `ALTER TABLE lc_course ADD link varchar(100);` - 向表中添加一列	
+* `ALTER TABLE lc_course DROP COLUMN link;` - 删除表中一列
+* `ALTER TABLE lc_course MODIFY teacher varchar(100);` - 修改一个列的数据类型	
+* `ALTER TABLE lc_course CHANGE COLUMN teacher lecture varchar(100);` - 重命名一个列
+
+---
+
+## Lesson 5 SQL语言基础 - 3
