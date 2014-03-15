@@ -123,8 +123,6 @@
 
 * `ALTER TABLE lc_course RENAME course;` - 重命名表	
 * `ALTER TABLE lc_course ADD link varchar(100);` - 向表中添加一列	
-
-
 * `ALTER TABLE lc_course DROP COLUMN link;` - 删除表中一列
 * `ALTER TABLE lc_course MODIFY teacher varchar(100);` - 修改一个列的数据类型	
 * `ALTER TABLE lc_course CHANGE COLUMN teacher lecture varchar(100);` - 重命名一个列
@@ -137,13 +135,24 @@
 
 * `INSERT INTO 表名称 VALUES (值1, 值2, ...);` - 向表格中插入一条记录
 * `INSERT INTO (列1, 列2) VLAUES (值1, 值2);` - 插入特定列的值
-* `例 -``INSERT INTO course(1, 'Install Linux', 'nash_su', 'Basic');`
+* `例` - `INSERT INTO course(1, 'Install Linux', 'nash_su', 'Basic');`
 
 ### SQL - 查询数据
 
 * `SELECT 列名1,列名2... FROM 表名称;`
 * `SELECT * FROM 表名称;`
-* `例 - ``SELECT course_name,category FROM course;` - 例子
-* `例` - `SELECT course_name,category FROM course;` - 例子
+* `例` - `SELECT course_name,category FROM course;`
 
+### SQL - 按条件查询数据
+
+* `SELECT 列名称 FROM 表名 WHERE 列 运算符 值;`
+* `例` - `SELECT * FROM course WHERE course_name='GNOME';`
+* `例` - `SELECT * FROM course WHERE course_length>10;`
+
+#### SQL WHERE 支持的运算符
+
+<div id="compareNinjaTable_58999">
+<img src="http://compareninja.com/public/images/loader_small.gif" style="display: block; width: 18px; margin: 50px auto 0;" />
+<p style="display: none;">Created with Compare Ninja</p>
+</div>
 
