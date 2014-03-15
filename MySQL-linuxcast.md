@@ -163,12 +163,18 @@
 | LIKE  |搜索某种模式   |
 >
 
-### SQL 删除一条记录
+### SQL - 删除一条记录
 
 * `DELETE FROM 表名称 WHERE 列 运算符 值;` - `删除指定记录`
 * `DELETE * FROM 表名称;` - `删除表中所有信息`
 
-### 
+### SQL - 更新一条记录
+
+* `UPDATE 表名称 SET 列名称 = 新值 WHERE 列=值;` - `更新指定记录`
+* `例` - `UPDATE course SET lecture='Lee' WHERE id=3;`
+
 ---
+## Lesson 6 SQL语言基础 - 4
+
 
 
