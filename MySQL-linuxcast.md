@@ -176,5 +176,20 @@
 ---
 ## Lesson 6 SQL语言基础 - 4
 
+### SQL - Distinct
 
+* `SELECT DISTINCT 列名称 FROM 表名称;` - `返回结果删除重复项`
+* `例` - `SELECT DISTINCT lecture FROM course;`
 
+### SQL - AND & OR
+> WHERE 条件中使用逻辑组合
+	SELECT * FROM 表名称 WHERE 条件1 AND 条件2;
+	SELECT * FROM 表名称 WHERE 条件1 OR 条件2;
+
+### SQL - 对结果进行排序
+> 对查询结果指定的列进行排序
+
+* `SELECT * FROM 表名称 ORDER BY 列名;` - `正序`
+* `SELECT * FROM 表名称 ORDER BY 列名 DESC;` - `倒序`
+
+---
