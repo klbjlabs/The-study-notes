@@ -123,6 +123,8 @@
 
 * `ALTER TABLE lc_course RENAME course;` - 重命名表	
 * `ALTER TABLE lc_course ADD link varchar(100);` - 向表中添加一列	
+
+
 * `ALTER TABLE lc_course DROP COLUMN link;` - 删除表中一列
 * `ALTER TABLE lc_course MODIFY teacher varchar(100);` - 修改一个列的数据类型	
 * `ALTER TABLE lc_course CHANGE COLUMN teacher lecture varchar(100);` - 重命名一个列
@@ -130,3 +132,18 @@
 ---
 
 ## Lesson 5 SQL语言基础 - 3
+
+### SQL - 向表中插入数据
+
+* `INSERT INTO 表名称 VALUES (值1, 值2, ...);` - 向表格中插入一条记录
+* `INSERT INTO (列1, 列2) VLAUES (值1, 值2);` - 插入特定列的值
+* `例 -``INSERT INTO course(1, 'Install Linux', 'nash_su', 'Basic');`
+
+### SQL - 查询数据
+
+* `SELECT 列名1,列名2... FROM 表名称;`
+* `SELECT * FROM 表名称;`
+* `例 - ``SELECT course_name,category FROM course;` - 例子
+* `例` - `SELECT course_name,category FROM course;` - 例子
+
+
