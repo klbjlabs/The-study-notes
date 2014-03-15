@@ -151,8 +151,13 @@
 
 #### SQL WHERE 支持的运算符
 
-<div id="compareNinjaTable_58999">
-<img src="http://compareninja.com/public/images/loader_small.gif" style="display: block; width: 18px; margin: 50px auto 0;" />
-<p style="display: none;">Created with Compare Ninja</p>
-</div>
-
+|操作符	|      功能	|
+|:-----:|:-------------:|
+|   =	|      等于	|
+|  	|     不等于	|
+|   	|      大于 	|
+|	|      小于     |
+|	|      小于     |
+|  	|      小于     |
+|BETWEEN|      小于     |
+| LIKE	|      小于     |
