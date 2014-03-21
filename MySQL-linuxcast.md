@@ -193,3 +193,114 @@
 * `SELECT * FROM 表名称 ORDER BY 列名 DESC;` - `倒序`
 
 ---
+## Lesson 7 MySQL用户管理基础
+
+### MySQL用户
+* MySQL 数据库默认只有一个root用户
+* MySQL 将用户的信息保存在mysql数据库user表中
+
+### 创建一个新的用户
+
+	CREATE USER 用户名 IDENTIFIED BY '密码';
+	// 新用户创建后是不能登陆的 因为未设置权限。
+
+### 删除一个用户
+
+	DROP USER 用户名;
+
+### 重命名一个用户
+	
+	RENAME USER 用户名 TO 新用户名;
+
+### 修改用户密码
+
+	SET PASSWORD = PASSWORD('新密码'); // 修改当前用户密码
+
+	SET PASSWORD FOR 用户 = PASSWORD('新密码');  // 修改指定用户密码
+
+---
+
+## Lesson 8 MySQL权限管理基础
+
+### 权限系统控制包含两个阶段
+1. 检查一个用户是否能够链接
+2. 检查用户是否具有所执行动作的权限
+
+>### MySQL权限层级
+1. 全局层级
+2. 数据库层级
+3. 表层级
+4. 列层级
+5. 子程序层级
+
+### MySQL授权命令
+MySQL通过GRANT授予权限，REVOKE撤销权限
+
+	// 授予一个用户权限:
+	GRANT ALL PRIVILEES ON 层级 to 用户名@主机 IDENTIFIED BY 密码;
+	---
+	// 授予klbj用户全局级全部权限:
+	GRANT ALL PRIVILEES ON *.* to 'klbj'@'%' IDENTIFIED BY '123456';
+	---
+	// 授予klbj用户针对test数据库的全部权限:
+	GRANT ALL PRIVILEGES ON test.* to 'klbj'@'%' IDENTIFIED BY '123456';
+	---
+	// 撤销一个用户权限
+	REVOKE ALL PRIVILEGES FROM 用户名;
+	---
+	// 撤销klbj用户全部权限
+	REVOKE ALL PRIVILEGES FROM klbj;
+
+### MySQL连接认证
+
+	'klbj'@'%'
+	  |     `------主机
+	  `---------用户名
+
+>### 主机是指允许从那些主机进行连接，可以使用如下形式:
+1. 所有主机: "%" ----(只能从远程连接登陆)
+2. 精确的主机名或IP地址: www.xxx.com 192.168.1.1
+3. 使用 "*" 通配符: *.xxx.com
+4. 指定一个网段: 192.168.1.0/255.255.255.0
+
+
+>赋予ROOT远程登陆权限(默认只能localhost连接)
+	GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456';
+
+---
+## Lesson 9 MySQL简单的备份恢复(mysqldump)
+
+### 备份一个指定的数据库:
+
+	mysqldump -u root -p 数据库名 > 备份文件.sql
+
+### 从备份的SQL文件恢复一个指定数据库:
+	
+	mysql -u root -p 数据库名称 < 备份文件.sql
+
+## Lesson 10 MySQL数据库字符编码设置
+
+### 数据库编码
+> 数据库使用一个特定编码保存数据,如Latin、Big5、GB2132、UTF8等,不同语言一般使用不同编码保存
+
+> 编码主要影响以下两个方面:
+1. 数据库保存相同内容所占用的空间大小。
+2. 数据库与客户端通信
+
+### MySQL 编码
+> MySQL数据库的默认编码是:
+
+	character set: latin1
+	cillation: latin1_swedish_ci
+
+> 可以通过以下命令查看MySQL支持的编码:
+
+	SHOW CHARACTER SET;
+	
+
+
+
+
+
+
+
