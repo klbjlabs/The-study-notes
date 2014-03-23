@@ -7,3 +7,4 @@ Linux 技巧整理
 * `id klbj`   //查看用户信息
 * `root # gpasswd -a <user> vboxusers`		//把用户添加到组
 * `root # netstat -tupln`	// show service port
+* `ipcs` //查看共享内存
