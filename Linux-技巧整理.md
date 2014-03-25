@@ -8,3 +8,5 @@ Linux 技巧整理
 * `root # gpasswd -a <user> vboxusers`		//把用户添加到组
 * `root # netstat -tupln`	// show service port
 * `ipcs` //查看共享内存
+---
+* `strings filename.bin`	//查看二进制文件中的字符串
