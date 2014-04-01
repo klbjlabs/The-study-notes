@@ -10,3 +10,5 @@ Linux 技巧整理
 * `ipcs` //查看共享内存
 ---
 * `strings filename.bin`	//查看二进制文件中的字符串
+* `lsnrctl start`		//？？监听？
+* `tail -f xx.txt`		//时实更新文件查看

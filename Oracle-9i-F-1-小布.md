@@ -118,8 +118,51 @@
 
 ### Start Up a Databases
 1. SHUTDOWN
-2. NOMOUNT [Instance Start] `STARTUP NOMOUNT`
-3. MOUNT []
-4. OPEN
+2. NOMOUNT [Instance Start] `startup nomount`
+3. MOUNT [Control file opened for this instance] `alter database mount;`
+4. OPEN [All files opened as described by the control file for this instance] `alter database open;`
 
+### Restricted Mode
+
+	STARTUP RESTRICT
+	alter system enable restricted session;
+	---
+	select sid,serial#,username from v$session;
+	alter system kill session 'sid,serial';  Kill
+
+### Read-Only Mode
+	
+	STARTUP MOUNT
+	ALTER DATABASE OPEN READ ONLY;
+
+### Shutting Down the Database
+1. Close a Database
+2. Unmount a Database
+3. ShutDown an Instance
+
+#### Shutdown mode
+* `A` - `ABORT`
+* `I` - `IMMEDIATE`
+* `T` - `TRANSACTIONAL`
+* `N` - `NORMAL`
+
+### Trace File
+* alterSID.log
+ * Records the commands
+ * Records results of major events
+ * Used for day-to-day operational information
+ * Used for diagnosing database errors
+ * Location defined by `BACKGROUND_DUMP_DEST`
+* Background trace Files
+ * Location defined by `BACKGROUND_DUMP_DEST`
+* User trace files
+ * Location is defined by `USER_DUMP_DEST`
+ * Size defined by `MAX_DUMP_FILE_SIZE`
+ * Enable/Disable User Tracing
+  * Using the `ALTER SESSION SET SQL_TRACE=TRUE`
+
+> show parameter dump
+
+---
+## Chapter 04 - Creating a Database
 
