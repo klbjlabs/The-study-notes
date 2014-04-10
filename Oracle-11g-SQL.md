@@ -579,5 +579,26 @@ Assume `SYSDATE` = '25-JUL-03':
 ------------------------------------------------------------------------
 ## Displaying Data ftom Multiple Tables
 
-Obtaining Data from Multiple Tables
+### Obtaining Data from Multiple Tables
+
+	SELECT employee_id, lastname, e.deparment_id, department_name
+	FROM employees e, departments d
+	WHERE e.department_id = d.department_id;
+
+### Creating Natural Joins
+
+	SELECT department_id, department_name,
+		location_id, city
+	FROM	departments
+	NATURAL JOIN locations;
+
+### Oracle Syntax
+
+	SELECT d.partment_id, d.department_name,
+		d.location_id, l.city
+	FROM departments d, locations l
+	WHERE d.location_id = l.location_id;
+
+
+
 
