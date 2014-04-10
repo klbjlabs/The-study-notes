@@ -291,16 +291,16 @@ SQL Statements
 	SELECT	last_name, department_id, salary
 	FROM	employees
 	ORDER BY department_id, salary DESC;
-	---
+	
 	ORDER BY department_id, salary DESC NULLS FIRST;
-	---
+	
 	ORDER BY department_id, salary DESC NULLS LAST;
 
 * Substitution Variables
 
 
 	WHERE employee_id = &employee_num;
-	---
+
 	WHERE job_id = '&job_title';
 
 ### Using the Double-Ampersand Substitution Variable
